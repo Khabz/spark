@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spark - A Easy & Simple Banner Creator</title>
+    <link rel="stylesheet" href="public/css/color.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="public/css/lux.css">
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://unpkg.com/vanilla-picker"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Spark</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="banner.html">Banner Creator</a>
+                </li>
+                <li class="nav-item">
+                    <a href="color.html">Color Schemes</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Register</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="float-right" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Color Schemes</li>
+        </ol>
+    </nav>
+    <main role="main">
+        <nav id="navcircles"></nav>
+        <button id="convert" onclick="convert()">HEX ↔ RGB</button>
+        <section id="content" contenteditable="true">
+            <h1>Color schemes for UI design</h1>
+        </section>
+        <section id="theming">
+            <nav class="title">
+                <span class="circle" id="combocircle"></span>
+                <h4>Combination</h4>
+                <div class="flex"></div>
+                <div>
+                    <button id="random">Random ⭯</button>
+                </div>
+                <div>
+                    <button id="swap" class="ml-2">Swap ⇌</button>
+                </div>
+            </nav>
+            <div class="family">
+                <div class="color">
+                    <div class="btn" id="bg-color"></div>
+                    <b>Background</b>
+                    <input type="text" readonly id="bg" class="hex" onclick="copy(this.id)" value="#000000" />
+                </div>
+                <div class="color">
+                    <div class="btn" id="color"></div>
+                    <b>Foreground</b>
+                    <input type="text" readonly id="fg" class="hex" onclick="copy(this.id)" value="#ffffff" />
+                </div>
+            </div>
+        </section>
+        <section id="gradient">
+            <nav class="title">
+                <span class="circle" id="gradcircle"></span>
+                <h4>Gradient</h4>
+                <div class="flex"></div>
+                <div>
+                    Steps:
+                    <input type="number" id="steps" oninput="this.value=this.value.slice(0,this.maxLength)" min="1" max="99" name="steps" value="10" maxlength="2" />
+                    <button onclick="updateSpitter()">Generate ↻</button>
+                </div>
+            </nav>
+            <div id="gradcolors"></div>
+        </section>
+        <section id="matcolors"></section>
+        <div id="snackbar">Copied</div>
+    </main>
+    <script src="public/js/color.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>
