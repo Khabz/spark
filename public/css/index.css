@@ -112,6 +112,15 @@ footer {
     flex-shrink: 0;
 }
 
+.header {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 30px;
+    width: 100%;
+}
+
 [contenteditable="true"]:empty:before {
     display: block;
     content: attr(placeholder);
@@ -225,6 +234,7 @@ button {
     align-items: center;
     justify-content: center;
     flex-grow: 1;
+    font-size: x-small;
 }
 
 .current {

@@ -4,12 +4,16 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "jshint travis.js"
+        "dev": "nodemon server.js"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
         "jshint": "^2.11.1"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "nodemon": "^2.0.4"
     }
 }
