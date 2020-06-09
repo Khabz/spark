@@ -75,6 +75,14 @@ footer {
     justify-content: center;
 }
 
+.nav a {
+    margin-left: 1rem;
+}
+
+.nav a:hover {
+    color: aliceblue;
+}
+
 .wrapper {
     position: sticky;
     top: 0;

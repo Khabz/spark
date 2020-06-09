@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spark - Banner Creator</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:700&display=swap" rel="stylesheet" />
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://unpkg.com/vanilla-picker"></script>
+</head>
+
+<body>
+    <main role="main" class="container">
+        <header>
+            <h2>
+                <a href="index.html">
+                    Spark
+                </a>
+            </h2>
+            <div class="nav">
+                <a href="banner.html" class="active">Banner Creator</a>
+                <a href="">Pitch Deck Creator</a>
+            </div>
+        </header>
+        <section class="content">
+            <div class="controls">
+                <div class="actions">
+                    <button id="download" onclick="download()"> Download🎉</button>
+                    <button id="random" onclick="randomize()">Sparkles✨</button>
+                </div>
+                <div class="flex">
+                    <h3>Background color</h3>
+                    <div id="bg" class="color"></div>
+                </div>
+                <div class="flex">
+                    <h3>Font color</h3>
+                    <div id="fg" class="color"></div>
+                </div>
+                <div class="flex">
+                    <h3>Border color</h3>
+                    <div id="bbg" class="color"></div>
+                </div>
+                <div class="flex">
+                    <div>Border width</div>
+                    <input type="number" id="borderw" oninput="borderwidth(this)" value="0" min="0" />
+                </div>
+            </div>
+            <div class="wrapper">
+                <div id="capture" class="capture">
+                    <div id="heading" class="heading" placeholder="text here" contenteditable="true">
+                        text here
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>
