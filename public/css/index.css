@@ -78,6 +78,10 @@ footer {
     color: aliceblue;
 }
 
+#download {
+    border-radius: 1px;
+}
+
 .wrapper {
     position: sticky;
     top: 0;
@@ -113,6 +117,13 @@ footer {
     color: white;
     font-size: 30px;
     width: 100%;
+    text-align: center;
+}
+
+.hero-home {
+    height: 65%;
+    border: solid, white, 10px;
+    border-radius: 2rem;
 }
 
 [contenteditable="true"]:empty:before {
